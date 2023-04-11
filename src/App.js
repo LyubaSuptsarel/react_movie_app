@@ -20,11 +20,11 @@ function App() {
      <Header />
      <Routes>
       <Route path="/react_movie_app" element={ <Home /> } />
-      <Route path="/latest" element={ <Latest /> } />
-      <Route path="/topRated" element={ <TopRated /> } />
-      <Route path="/popular" element={ <Popular /> } />
+      <Route path="/react_movie_app/latest" element={ <Latest /> } />
+      <Route path="/react_movie_app/topRated" element={ <TopRated /> } />
+      <Route path="/react_movie_app/popular" element={ <Popular /> } />
       <Route path="*" element={ <NotFoundPage /> } />
-      <Route path="/profile" element={ <Profile /> } />
+      <Route path="/react_movie_app/profile" element={ <Profile /> } />
     </Routes>
      <Footer />
      <BackToTop />

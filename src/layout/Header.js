@@ -22,7 +22,7 @@ function Header() {
       <ul className="right">
         <li><a href="#" className="text" onClick={handleLightThemeClick}><i className="material-icons hover">brightness_low</i></a></li>
         <li><a href="#" className="text"  onClick={handleDarkThemeClick}><i className="material-icons hover">brightness_3</i></a></li>
-        <li><Link to="/Profile" className="hover text">Profile</Link></li>
+        <li><Link to="/react_movie_app/profile" className="hover text">Profile</Link></li>
       </ul>
     </div>
   </nav>
