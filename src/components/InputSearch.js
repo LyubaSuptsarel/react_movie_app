@@ -14,9 +14,9 @@ const InputSearch = (props) => {
     return <div className="row container">
         <div className="col s12">
             <div className="choose">
-                <Link to="/react_movie_app/Latest" className="choose-button"><i className="material-icons icon">camera</i><p className="text">Latest</p></Link>
-                <Link to="/react_movie_app/Toprated" className="choose-button"><i className="material-icons icon">mood</i><p className="text">Top Rated</p></Link>
-                <Link to="/react_movie_app/Popular" className="choose-button"><i className="material-icons icon">storage</i><p className="text">Popular</p></Link>
+                <Link to="/react_movie_app/latest" className="choose-button"><i className="material-icons icon">camera</i><p className="text">Latest</p></Link>
+                <Link to="/react_movie_app/toprated" className="choose-button"><i className="material-icons icon">mood</i><p className="text">Top Rated</p></Link>
+                <Link to="/react_movie_app/popular" className="choose-button"><i className="material-icons icon">storage</i><p className="text">Popular</p></Link>
             </div>
             <div className="input-field">
                 <input
