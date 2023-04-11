@@ -190,7 +190,7 @@ i.medium {
   position: fixed;
   bottom: 30px;
   right: 10px;
-  z-index: 1;
+  z-index: 5;
 }
 
 .input-btn {
