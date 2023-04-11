@@ -1,13 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Roboto+Mono&display=swap');
+
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; 
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Delicious Handrawn';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-main-color);
+  transition: background-color 1000ms linear;
+}
+
+html[data-theme='dark'] {
+  --background-header-color: #37474f;
+  --background-main-color: #182936;
+  --background-btn: #0f1c26;
+  --text-color: #ffffff;
+}
+
+html[data-theme='light'] {
+  --background-header-color: #ddd;
+  --background-main-color: #d1d1d1;
+  --background-btn: #a9a9a9;
+  --text-color: #182936;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.header {
+  height: fit-content;
+}
+
+.logo__img {
+  width: 50px;
+  height: 55px;
+}
+
+.hover:hover, .text:active {
+  color: #954e6b;
+}
+
+.main {
+  min-height: calc(100vh - 54px - 183px);
+  padding: 1.4rem 1rem;
+}
+
+.nav-wrapper, .logo, .right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo__text {
+  font-size: 32px;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 25px;
+}
+
+.movie {
+  margin-top: 10px;
+}
+
+a.card, .card {
+  box-shadow: 0 0 10px 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.card-reveal {
+  width: 80vw
+}
+
+.single-movie {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: fit-content;
+  padding: 20px;
+}
+
+.single-text {
+  font-family: 'Roboto Mono';
+  font-size: 0.8rem;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.card-image {
+  z-index: 2;
+}
+
+.icon {
+  color: #954e6b;
+}
+
+.choose {
+  display: flex;
+  justify-content: space-around;
+  gap: 1vw;
+  flex-wrap: wrap;
+}
+
+.choose-button {
+  width: 100%;
+  max-width: 150px;
+  height: 96px;
+  background-color: var(--background-btn);
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.choose-button:hover, .submit-btn:hover {
+  box-shadow: 0 0 15px 6px #954e6b;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px 6px #954e6b;
+}
+
+.movie-img {
+  height: 320px;
+}
+
+.header, .footer {
+  background-color: var(--background-header-color);
+  transition: background-color 500ms linear;
+}
+
+.text {
+  color: var(--text-color);
+  transition: color 1000ms linear;
+}
+
+h4.text {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+h5 {
+  margin-top: 0;
+}
+
+a {
+  color: #212121;
+}
+
+.bg {
+  position: absolute;
+  opacity: 0.3;
+  width: 98%;
+  height: 48%;
+}
+
+.medium {
+    border: 2px solid var(--text-color);
+  border-radius: 50%;
+}
+
+i.medium {
+  font-size: 3rem;
+}
+
+.medium:hover {
+  color: #954e6b;
+  border: 2px solid #954e6b;
+  box-shadow: 0 0 10px 4px #954e6b;
+}
+
+.scroll {
+  position: fixed;
+  bottom: 30px;
+  right: 10px;
+  z-index: 1;
+}
+
+.input-btn {
+  border: none;
+  background-color: transparent;
+}
+
+input.validate:not(.browser-defult):focus:not(:read-only) {
+  color: var(--text-color);
+  border-bottom: 1px solid #954e6b;
+  box-shadow: 0 1px 0 0 #954e6b;
+}
+
+.validate::placeholder {
+  color: var(--text-color);
+  opacity: 0.3;
+}
+
+input {
+  color: var(--text-color);
+}
+
+.input-field {
+  display: flex;
+}
+
+.input-field:focus-visible, .input-btn:focus, .input-btn:focus-visible {
+  background-color: var(--background-main-color);
+  outline: none;
+}
+
+.input-btn:hover {
+  cursor: pointer;
+}
+
+.submit-btn {
+  background-color: var(--background-btn);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-family: 'Delicious Handrawn';
+}
+
+.error-text {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #954e6b;
+  font-size: 0.7rem;
+}
+
+@media (max-width: 540px) {
+  .nav-wrapper {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .movies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 280px;
+  }
+  .main {
+    min-height: calc(100vh - 110px - 183px);
+  }
+  .single-movie {
+    flex-direction: column;
+  }
+  .bg {
+    display: none;
+  }
 }
