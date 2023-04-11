@@ -19,7 +19,7 @@ function App() {
   <>
      <Header />
      <Routes>
-      <Route path="/" element={ <Home /> } />
+      <Route path="/react_movie_app" element={ <Home /> } />
       <Route path="/latest" element={ <Latest /> } />
       <Route path="/topRated" element={ <TopRated /> } />
       <Route path="/popular" element={ <Popular /> } />

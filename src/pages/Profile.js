@@ -18,7 +18,7 @@ function Profile() {
     return (
         <div className="container main">
             <div>
-                <Link to="/" className="text hover"><i className="material-icons hover tiny">arrow_back</i>Home page</Link>
+                <Link to="/react_movie_app" className="text hover"><i className="material-icons hover tiny">arrow_back</i>Home page</Link>
             </div>
             <h3 className="text">Your Profile</h3>
             <form onSubmit={handleSubmit(onSubmit)}>

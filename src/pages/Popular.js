@@ -42,7 +42,7 @@ class Popular extends React.Component {
         const { movieList, loading } = this.state;
         return <main className="main">
             <div className='container'>
-            <Link to="/" className="text hover"><i className="material-icons hover tiny">arrow_back</i>Home page</Link>
+            <Link to="/react_movie_app" className="text hover"><i className="material-icons hover tiny">arrow_back</i>Home page</Link>
             </div>
             {this.state.loading ? 
                 (<Preloader />)
