@@ -137,7 +137,7 @@ div.card-reveal {
 }
 
 .movie-img {
-  height: 320px;
+  object-fit: cover;
 }
 
 .header, .footer {

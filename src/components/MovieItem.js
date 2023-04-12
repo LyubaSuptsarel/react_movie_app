@@ -27,4 +27,5 @@ function MovieItem(props) {
         </div>
 }
 
+
 export default MovieItem;
